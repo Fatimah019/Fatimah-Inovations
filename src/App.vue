@@ -4,15 +4,13 @@
     <!-- nav header-->
     <div class="header">
       <nav class="flex items-center">
-          <div class="logo">logo</div>
+          <div class="logo"><span v-on:click="goHome">logo</span></div>
           <ul class="menu">
               <li v-on:click="renderProduct">Product</li>
               <li v-on:click="renderService">Service</li>
           </ul>
       </nav>
     </div>
-
-
     <!-- image slides -->
     <div class="img-slider">
       <vue-image-slider :images="imagesHome" :intervalVal=6000 :height=300 />
@@ -20,14 +18,6 @@
     <keep-alive>
       <component v-bind:is="component" />
     </keep-alive>
-    
-   
-    <!-- <div >
-      <Product/>
-    </div>
-    <div>
-      <Service/>
-    </div> -->
   </div>
 </template>
 
@@ -61,40 +51,17 @@ export default {
 
   methods:{
     renderService(){
-      if(this.component === Service){
-        this.component = Product
-      }
-      else{
        this.component = Service
-      }
     },
     renderProduct(){
-         if(this.component === Product){
-        this.component = Service
-      }
-      else{
-        this.component = Product
+        this.component =Product
+    },
+    goHome(){
+        if(this.component === Product || this.component === Service){
+        this.component = Home
       }
     }
   },
-    mounted() {
-    const accessToken = "A3F7DkBC723hfY2m0QUuB290UqyWu_1WGQpY-KpVBZg";
-    axios({
-      method: "get",
-      url: "https://api.unsplash.com/photos?page=1&per_page=29",
-      headers: {
-        Authorization: `Client-ID ${accessToken}`,
-      },
-    })
-      .then((response) => {
-        // console.log(response.data);
-        this.images = response.data;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  },
-  
 }
 </script>
 
@@ -128,7 +95,9 @@ export default {
        margin:auto;
        margin-top:20px;
        margin-bottom: 20px;
+ 
     }
+    
     .bg-black{
         background-color: black;
         padding:10px;

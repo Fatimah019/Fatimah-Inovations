@@ -27,7 +27,6 @@ export default {
   }),
 
   mounted() {
-    const accessToken = "A3F7DkBC723hfY2m0QUuB290UqyWu_1WGQpY-KpVBZg";
     axios({
       method: "get",
       url: "https://api.unsplash.com/photos?page=1&per_page=29",
