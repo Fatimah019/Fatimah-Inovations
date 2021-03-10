@@ -13,16 +13,32 @@
     <div class="w-100 m-t-100 m-b-20">
       <vue-image-slider :images="imagesHome" :intervalVal=6000 :width=300 :height=300 />
     </div>
+    <!-- <div class="w-80 auto m-t-100 m-b-20">
+      <VueSlickCarousel :arrows="true">
+        <div v-for="item in imagesHome" :key="item" class="m-t-e-10">
+          <div class="bg-black-100 p-t-e-10 text-center">
+            <img
+            :key="item"
+                :src="item"
+                class="w-80"
+            />
+          </div>
+        </div>
+      </VueSlickCarousel>
+    </div> -->
 </div>
 </template>
 
 <script>
 import VueImageSlider from "vue-image-slider";
-
+import VueSlickCarousel from "vue-slick-carousel";
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default {
   name: 'Top',
   components:{
-    VueImageSlider
+    VueImageSlider,
+    VueSlickCarousel
   },
   data(){
     return{
