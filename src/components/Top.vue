@@ -46,11 +46,6 @@ export default {
   top:0;
   left:0;
 }
-/* #app{
-  background-color: rgb(243, 234, 234);
-  margin-left:0;
-} */
-
 .flex {
   display: flex;
 }

@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish="dist"
+  # The base directory should be the path to the nested Vue project
+
+  [[redirects]]
+  from = "/https://getimage.netlify.app/api.unsplash.com/*"
+  to = "/index.html"
+  status = 200

@@ -154,7 +154,7 @@ export default {
 @media screen and (max-width:480px) {
     .grid-col-4{
         display: grid;
-        grid-template-columns: repeat(autofit, minmax(0, 1fr));
+        grid-template-columns: repeat(1, minmax(100%, 1fr));
     }
 }
 </style>
