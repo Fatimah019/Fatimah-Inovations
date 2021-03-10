@@ -1,3 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+*:root {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #000;
+}
+
+.flex {
+  display: flex;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+.auto {
+  display: flex;
+  margin: auto;
+}
+
+/* colors */
+.pri-color-font {
+  color: #000;
+}
+.sec-color-font {
+  color: #fff;
+}
+.bg-green-400 {
+  color: rgb(3, 82, 3);
+}
+.f-s-12 {
+  font-size: 12px;
+}
+.w-100 {
+  width: 100%;
+}
+.w-80 {
+  width: 80%;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}

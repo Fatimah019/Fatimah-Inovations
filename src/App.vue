@@ -2,17 +2,17 @@
   <div id="app">
     <router-view/>
     <!-- nav header-->
-    <div class="bg-teal-500 h-screen">
-      <nav class="flex items-center">
-          <div class="logo"><span v-on:click="goHome"><router-link to="/" class="links">Logo</router-link></span></div>
-          <ul class="menu">
-              <li v-on:click="renderProduct"><router-link to="/product" class="links">Product</router-link></li>
-              <li v-on:click="renderService"><router-link to="/service" class="links">Service</router-link></li>
+    <div class="w-100 bg-green-400 h-60 header">
+      <nav class="container align-center space-between">
+          <div class="logo"><span v-on:click="goHome"><router-link to="/" class="f-s-12 sec-color-font no-deco-link">Logo</router-link></span></div>
+          <ul class="list-no-style align-center">
+              <li v-on:click="renderProduct"><router-link to="/product" class="f-s-12 sec-color-font no-deco-link m-r-l-5">Product</router-link></li>
+              <li v-on:click="renderService"><router-link to="/service" class="f-s-12 sec-color-font no-deco-link m-r-l-5">Service</router-link></li>
           </ul>
       </nav>
     </div>
     <!-- image slides -->
-    <div class="img-slider">
+    <div class="w-100 m-t-100 m-b-20">
       <vue-image-slider :images="imagesHome" :intervalVal=6000 :height=300 />
     </div>
     <keep-alive>
@@ -27,7 +27,7 @@ import Home from "./components/Home.vue";
 import Product from "./components/Product.vue";
 import Service from "./components/Service.vue";
 import VueImageSlider from "vue-image-slider";
-import "./assets/css/style.css";
+// import "./assets/styles/style.css";
 
 export default {
   name: 'App',
@@ -67,66 +67,78 @@ export default {
 </script>
 
 <style>
-    .header{
-      background-color: rgb(21, 128, 0);
-      width:100%;
-      height:60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    nav{
-      width:80%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav ul{
-      padding:0;
-      margin:0;
-      display: flex;
-    }
-    nav ul li{
-      margin:0 10px;
-      list-style-type: none;
-      color:#fff;
-    }
-    .links{
-      /* color:#fff; */
-      text-decoration: none;
-    }
-    .img-slider{
-       width:80%;
-       margin:auto;
-       margin-top:20px;
-       margin-bottom: 20px;
- 
-    }
-    
-    .bg-black{
-        background-color: black;
-        padding:10px;
-        color:#fff;
-        width:10%;
-        text-align: center;
-    }
-    .bg-green{
-        background-color: green;
-        padding:5px;
-        color:#fff;
-        padding:2px 10px;
-        width:80%;
-        text-align: center;
-    }
-    img{
-        width:80%;
-    }
-    .product-res{
-      margin:10px;
-      
-    }
-    .all-items{
-       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+/* #app{
+  background-color: rgb(243, 234, 234);
+  margin-left:0;
+} */
+.header{
+  position: absolute;
+  top:0;
+  left:0;
+}
+.flex {
+  display: flex;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+.auto {
+  display: flex;
+  margin: auto;
+}
+.list-no-style{
+  list-style-type: none;
+}
+.no-deco-link{
+  text-decoration: none;
+}
+/* colors */
+.pri-color-font {
+  color: #000;
+}
+.sec-color-font {
+  color: #fff;
+}
+.bg-green-400 {
+  background-color: rgb(3, 82, 3);
+}
+.f-s-12 {
+  font-size: 100%;
+}
+.w-100 {
+  width: 100%;
+}
+.h-60{
+  height:60px;
+}
+.w-100{
+  width:100%;
+}
+.w-80 {
+  width: 80%;
+}
+.m-t-100{
+  margin-top:100px;
+}
+.m-r-l-5{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.m-b-20{
+  margin-bottom: 20px;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+
 </style>
