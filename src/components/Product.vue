@@ -1,4 +1,6 @@
 <template>
+<div>
+  <Top/>
   <div class="container m-t-b-20">
     <h2>Product Merchant</h2>
     <div class="flex grid-col-4">
@@ -15,14 +17,19 @@
         </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
+import Top from "./Top.vue";
 import axios from 'axios'
 import dotenv from "dotenv"
 dotenv.config()
 export default {
   name: 'Product',
+  components:{
+    Top,
+  },
   data: () => ({
     images: [],
   }),
@@ -37,7 +44,6 @@ export default {
       },
     })
       .then((response) => {
-        // console.log(response.data);
         this.images = response.data;
       })
       .catch((err) => {
@@ -130,25 +136,25 @@ export default {
 }
 .grid-col-4{
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(23%, 1fr));
 }
 
 @media screen and (max-width:780px) {
     .grid-col-4{
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(33%, 1fr));
+    }
+}
+@media screen and (max-width:600px) {
+    .grid-col-4{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(48%, 1fr));
     }
 }
 @media screen and (max-width:480px) {
     .grid-col-4{
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(autofit, minmax(0, 1fr));
     }
 }
-/* @media screen and (max-width:480px) {
-    .grid-col-4{
-        display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-} */
 </style>

@@ -7,9 +7,9 @@ import Service from "@/components/Service";
 Vue.use(Router);
 
 const routes = [
-  // { path: "/", name: "Home", component: Home },
-  // { path: "/product", name: "Product", component: Product },
-  // { path: "/service", name: "Service", component: Service }
+  { path: "/", name: "Home", component: Home },
+  { path: "/product", name: "Product", component: Product },
+  { path: "/service", name: "Service", component: Service }
 ];
 
 export default new Router({
