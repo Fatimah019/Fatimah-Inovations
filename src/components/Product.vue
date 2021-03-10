@@ -139,16 +139,16 @@ export default {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:480px) {
     .grid-col-4{
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-@media screen and (max-width:480px) {
+/* @media screen and (max-width:480px) {
     .grid-col-4{
         display: grid;
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
-}
+} */
 </style>

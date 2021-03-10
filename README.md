@@ -2,6 +2,15 @@
 
 > A Vue.js project
 
+## version of vue cli
+2.9.6
+
+## Hosted page
+
+Link to the page deployed to netlify [url](https://fatimahinnovationtest.netlify.app) .
+
+Images gotten from Unsplash at [Unsplah](https://unsplash.com) .
+
 ## Build Setup
 
 ``` bash

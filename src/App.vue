@@ -13,7 +13,7 @@
     </div>
     <!-- image slides -->
     <div class="w-100 m-t-100 m-b-20">
-      <vue-image-slider :images="imagesHome" :intervalVal=6000 :height=300 />
+      <vue-image-slider :images="imagesHome" :intervalVal=6000 :width=300 :height=300 />
     </div>
     <keep-alive>
       <component v-bind:is="component" />
