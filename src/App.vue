@@ -2,12 +2,12 @@
   <div id="app">
     <router-view/>
     <!-- nav header-->
-    <div class="header">
+    <div class="bg-teal-500 h-screen">
       <nav class="flex items-center">
-          <div class="logo"><span v-on:click="goHome"><router-link to="/">Logo</router-link></span></div>
+          <div class="logo"><span v-on:click="goHome"><router-link to="/" class="links">Logo</router-link></span></div>
           <ul class="menu">
-              <li v-on:click="renderProduct"><router-link to="/product">product</router-link></li>
-              <li v-on:click="renderService"><router-link to="/service">Service</router-link></li>
+              <li v-on:click="renderProduct"><router-link to="/product" class="links">Product</router-link></li>
+              <li v-on:click="renderService"><router-link to="/service" class="links">Service</router-link></li>
           </ul>
       </nav>
     </div>
@@ -27,6 +27,7 @@ import Home from "./components/Home.vue";
 import Product from "./components/Product.vue";
 import Service from "./components/Service.vue";
 import VueImageSlider from "vue-image-slider";
+import "./assets/css/style.css";
 
 export default {
   name: 'App',
@@ -67,13 +68,12 @@ export default {
 
 <style>
     .header{
-      background-color: teal;
+      background-color: rgb(21, 128, 0);
       width:100%;
       height:60px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color:#fff;
     }
     nav{
       width:80%;
@@ -89,6 +89,11 @@ export default {
     nav ul li{
       margin:0 10px;
       list-style-type: none;
+      color:#fff;
+    }
+    .links{
+      /* color:#fff; */
+      text-decoration: none;
     }
     .img-slider{
        width:80%;

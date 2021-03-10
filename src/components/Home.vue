@@ -33,7 +33,7 @@ export default {
     const accessToken = "A3F7DkBC723hfY2m0QUuB290UqyWu_1WGQpY-KpVBZg";
     axios({
       method: "get",
-      url: "https://api.unsplash.com/photos?page=1&per_page=29",
+      url: "https://api.unsplash.com/photos?page=1&per_page=2",
       headers: {
         Authorization: `Client-ID ${accessToken}`,
       },
