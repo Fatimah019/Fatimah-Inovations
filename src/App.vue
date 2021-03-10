@@ -14,7 +14,9 @@
 
 
     <!-- image slides -->
-    <!-- <Nav /> -->
+    <div class="img-slider">
+      <vue-image-slider :images="imagesHome" :intervalVal=6000 :height=300 :width="1100" />
+    </div>
     <keep-alive>
       <component v-bind:is="component" />
     </keep-alive>
@@ -34,17 +36,24 @@
 import Home from "./components/Home.vue";
 import Product from "./components/Product.vue";
 import Service from "./components/Service.vue";
+import VueImageSlider from "vue-image-slider";
 
 export default {
   name: 'App',
   components:{
     Home,
     Product,
-    Service
+    Service,
+    VueImageSlider
   },
   data(){
     return{
-    imagesHome: [],
+    imagesHome: [
+        'https://res.cloudinary.com/dycyotaya/image/upload/v1579602435/IMG_3934_roerob.jpg',
+        'https://res.cloudinary.com/dycyotaya/image/upload/v1579602293/php-1_vmp6ze.svg',
+        'https://res.cloudinary.com/dycyotaya/image/upload/v1579602292/natuedesktop_okwazw.jpg',
+        'https://res.cloudinary.com/dycyotaya/image/upload/v1579602285/littleangel_brkigk.jpg'
+    ],
     component:"Home",
     }
   },
@@ -113,6 +122,12 @@ export default {
     nav ul li{
       margin:0 10px;
       list-style-type: none;
+    }
+    .img-slider{
+       width:80%;
+       margin:auto;
+       margin-top:20px;
+       margin-bottom: 20px;
     }
     .bg-black{
         background-color: black;

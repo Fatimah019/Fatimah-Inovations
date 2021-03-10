@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <h1>Merchant</h1>
+  
+    <h2>Merchant</h2>
+
     <div class="flex all-items">
         <div v-for="item in images" :key="item.user.first_name" class="product-res">
           <div class="bg-black">
