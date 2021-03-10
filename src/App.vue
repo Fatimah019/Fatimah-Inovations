@@ -4,10 +4,10 @@
     <!-- nav header-->
     <div class="header">
       <nav class="flex items-center">
-          <div class="logo"><span v-on:click="goHome">logo</span></div>
+          <div class="logo"><span v-on:click="goHome"><router-link to="/">Logo</router-link></span></div>
           <ul class="menu">
-              <li v-on:click="renderProduct">Product</li>
-              <li v-on:click="renderService">Service</li>
+              <li v-on:click="renderProduct"><router-link to="/product">product</router-link></li>
+              <li v-on:click="renderService"><router-link to="/service">Service</router-link></li>
           </ul>
       </nav>
     </div>
