@@ -4,6 +4,6 @@
   # The base directory should be the path to the nested Vue project
 
   [[redirects]]
-  from = "/https://getimage.netlify.app/api.unsplash.com/*"
+  from = "/*"
   to = "/index.html"
   status = 200
