@@ -98,7 +98,7 @@ export default {
     background-color: #000;
 }
 .bg-white-100{
-    background-color: #fff;
+    background-color: rgba(190, 148, 148, 0.1);
 }
 .f-s-12 {
   font-size: 100%;
