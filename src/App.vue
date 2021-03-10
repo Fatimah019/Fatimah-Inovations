@@ -15,7 +15,7 @@
 
     <!-- image slides -->
     <div class="img-slider">
-      <vue-image-slider :images="imagesHome" :intervalVal=6000 :height=300 :width="1100" />
+      <vue-image-slider :images="imagesHome" :intervalVal=6000 :height=300 />
     </div>
     <keep-alive>
       <component v-bind:is="component" />
